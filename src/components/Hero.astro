@@ -1,0 +1,27 @@
+---
+import { Icon } from './Icon'
+import { IconGitHub } from './Icons'
+import HeroLink from './HeroLink.astro'
+---
+
+<section class='flex flex-col items-center gap-4'>
+  <div class='size-32 flex items-center justify-center rounded-full overflow-hidden p-1 border-4 border-mauve'>
+    <img src='/profile.webp' class='h-full w-full rounded-full' />
+  </div>
+  <h1 class='text-3xl font-bold'>Hola, soy mango</h1>
+  <p>sobre mí...</p>
+  <div>
+    <HeroLink href='https://github.com/Ubiufboeuf'>
+      <Icon class='size-5'>
+        <IconGitHub />
+      </Icon>
+      <span class='text-sm'>GitHub</span>
+    </HeroLink>
+    <HeroLink>
+      <Icon class='size-5'>
+        <IconGitHub />
+      </Icon>
+      <span class='text-sm'>Linkedin</span>
+    </HeroLink>
+  </div>
+</section>
