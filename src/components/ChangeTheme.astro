@@ -1,0 +1,35 @@
+---
+import { Icon } from './Icon'
+---
+
+<button id='toggle-theme' class='fixed bottom-4 right-4 h-12 w-12 flex items-center justify-center aspect-square rounded-lg cursor-pointer border border-overlay-0'>
+  <Icon class='size-6 fill-transparent stroke-2 stroke-text'>
+    <svg id='sun-icon' viewBox='0 0 24 24' class='h-full w-full is-dark:hidden' stroke-linecap='round' stroke-linejoin='round'>
+      <path d='M8 12a4 4 0 1 0 8 0a4 4 0 1 0 -8 0' />
+      <path d='M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7' />
+    </svg>
+    <svg id='moon-icon' viewBox='0 0 24 24' class='h-full w-full is-dark:block hidden' stroke-linecap='round' stroke-linejoin='round'>
+      <path d='M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008' />
+    </svg>
+  </Icon>
+</button>
+
+<script>
+  const { dataset } = document.documentElement
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+  
+  const toggle = document.querySelector('#toggle-theme') as HTMLButtonElement
+  toggle.addEventListener('click', toggleTheme)
+
+  function toggleTheme () {
+    const currentTheme = dataset.theme
+    const isCurrentlyDark = currentTheme === 'auto'
+      ? prefersDark
+      : currentTheme === 'dark'
+
+    const newTheme = isCurrentlyDark ? 'light' : 'dark'
+    dataset.theme = newTheme
+
+    document.cookie = `_mpt=${newTheme}; path=/`
+  }
+</script>
