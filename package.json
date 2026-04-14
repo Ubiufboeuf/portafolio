@@ -12,6 +12,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.1.6"
+    "@tailwindcss/vite": "4.2.2",
+    "astro": "6.1.6",
+    "tailwindcss": "4.2.2"
+  },
+  "devDependencies": {
+    "@eslint/css": "1.1.0",
+    "@eslint/js": "10.0.1",
+    "@eslint/json": "1.2.0",
+    "@eslint/markdown": "8.0.1",
+    "@stylistic/eslint-plugin": "5.10.0",
+    "eslint": "10.2.0",
+    "globals": "17.5.0",
+    "jiti": "2.6.1",
+    "typescript-eslint": "8.58.2"
   }
 }
