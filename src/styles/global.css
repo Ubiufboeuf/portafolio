@@ -66,7 +66,45 @@
   --color-crust: #dce0e8;
 }
 
+@custom-variant shr {
+  @media (pointer: fine) {
+    &:hover {
+      @slot;
+    }
+  }
+  @media (pointer: coarse) {
+    &:active {
+      @slot;
+    }
+  }
+}
+
+@custom-variant is-dark {
+  &:where([data-theme='dark'] *) {
+    @slot;
+  }
+
+  &:where([data-theme='auto'] *) {
+    @media (prefers-color-scheme: dark) {
+      @slot;
+    }
+  }
+}
+
 :root {
   font-family: Inter, system-ui;
   color-scheme: dark light;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+h1 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
