@@ -1,0 +1,83 @@
+---
+import { Icon } from './Icon'
+import { IconGitHub, IconExternal, IconNPM } from './Icons'
+import { ExpressPill } from './Pills'
+import { AstroPill, BunPill, PreactPill, TailwindPill, TypeScriptPill } from './Pills'
+import ProjectLink from './ProjectLink.astro'
+
+const projects = [
+  {
+    name: 'Zenith',
+    href: 'https://zenith-6nl.pages.dev',
+    paragraphs: [
+      'Sistema POS con gestión de inventario y clientes integrado, pensado para optimizar el flujo de trabajo en entornos de ventas y almacenes.',
+      'Creado para'
+    ],
+    thumbnail: '/zenith.webp',
+    aspectRatio: 976 / 438.44,
+    technologies: [AstroPill, PreactPill, TailwindPill],
+    links: [
+      { name: 'Ver en GitHub', href: 'https://github.com/Ubiufboeuf/zenith', icon: IconGitHub },
+      { name: 'Ir a la web', href: 'https://zenith-6nl.pages.dev', icon: IconExternal }
+    ]
+  },
+  {
+    name: 'Monado',
+    href: 'https://monado.pages.dev',
+    paragraphs: ['Reproductor de video'],
+    thumbnail: '/monado.webp',
+    aspectRatio: 976 / 549,
+    technologies: [AstroPill, PreactPill, TailwindPill],
+    links: [
+      { name: 'Ver en GitHub', href: 'https://github.com/Ubiufboeuf/monado', icon: IconGitHub },
+      { name: 'Ir a la web', href: 'https://monado.pages.dev', icon: IconExternal }
+    ]
+  },
+  {
+    name: 'yt-kit',
+    href: 'https://npmjs.org/@yt-kit/core',
+    paragraphs: ['SDK'],
+    thumbnail: '/yt-kit.webp',
+    aspectRatio: 976 / 373.78,
+    technologies: [TypeScriptPill, BunPill],
+    links: [
+      { name: 'GitHub', href: 'https://github.com/Ubiufboeuf/yt-kit', icon: IconGitHub },
+      { name: 'NPM', href: 'https://npmjs.org/@yt-kit/core', icon: IconNPM },
+      { name: 'Instalar', href: 'https://npmjs.org/@yt-kit/core', icon: IconNPM },
+    ]
+  }
+]
+---
+
+<section id='projects' class='flex flex-col items-center gap-6 pt-18'>
+  <h1 class='text-3xl sm:text-5xl sm:leading-relaxed font-extrabold text-center'>Top Proyectos</h1>
+  <p class='text-center text-sm'>(Hay más en <a href='https://github.com/Ubiufboeuf?tab=repositories' class='text-blue underline transition-colors'>github</a>, pero estos son los mejores)</p>
+  <div class='flex flex-col items-center gap-12'>
+    { projects.map(({ name, href, paragraphs, thumbnail, aspectRatio, technologies, links }) => (
+      <article class='flex flex-col w-full gap-2'>
+        <h1 class='text-2xl font-extrabold flex-1 text-center'>{name}</h1>
+        <a href={href} class='w-full h-fit rounded-xl overflow-hidden p-1 bg-linear-to-br from-mauve to-peach'>
+          <div class='w-full h-fit rounded-lg overflow-hidden p-1 bg-base'>
+            <img src={thumbnail} class='w-full h-auto rounded-sm oveflow-hidden' style={`aspect-ratio: ${aspectRatio}`} />
+          </div>
+        </a>
+        <div class='w-full h-fit flex flex-col gap-3'>
+          <div class='flex items-center justify-center flex-wrap gap-1'>
+            { technologies?.map((Pill) => <Pill />) }
+          </div>
+          { paragraphs.map((paragraph) => <p class='text-sm text-center transition-colors text-subtext-1'>{paragraph}</p>) }
+          <div class='flex justify-center gap-2'>
+            { links.map(({ name, href, icon: LinkIcon }) => (
+              <ProjectLink href={href} class='group font-bold transition-colors **:transition-colors text-text bg-crust shr:bg-[#323344]'>
+                <Icon class='size-5 stroke-crust group-shr:stroke-[#323344]'>
+                  <LinkIcon />
+                </Icon>
+                <span class='text-sm'>{name}</span>
+              </ProjectLink>
+            )) }
+          </div>
+        </div>
+      </article>
+    )) }
+  </div>
+</section>
