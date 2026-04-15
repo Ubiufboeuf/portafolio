@@ -47,6 +47,14 @@ export const IconTheme = ({ id, mode }: { id?: string, mode: Theme }) => (
   </Svg>
 )
 
+export const IconMail = () => (
+  <Svg>
+    <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
+    <path d="M3 7l9 6l9 -6" />
+  </Svg>
+)
+
+
 export function IconGitHub () {
   return (
     <Svg>
@@ -54,3 +62,13 @@ export function IconGitHub () {
     </Svg>
   )
 }
+
+export const IconLinkedin = () => (
+  <svg viewBox='0 0 24 24' class='h-full w-full pointer-events-none' fill='none' stroke='currentColor' stroke-linejoin='round' stroke-linecap='round'>
+    <path d='M8 11v5' />
+    <path d='M8 8v.01' />
+    <path d='M12 16v-5' />
+    <path d='M16 16v-3a2 2 0 1 0 -4 0' />
+    <path d='M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10' />
+  </svg>
+)

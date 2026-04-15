@@ -1,6 +1,6 @@
 ---
 import { Icon } from './Icon'
-import { IconGitHub } from './Icons'
+import { IconMail, IconGitHub, IconLinkedin } from './Icons'
 import HeroLink from './HeroLink.astro'
 ---
 
@@ -8,18 +8,24 @@ import HeroLink from './HeroLink.astro'
   <div class='size-32 flex items-center justify-center rounded-full overflow-hidden p-1 border-4 border-mauve'>
     <img src='/profile.webp' class='h-full w-full rounded-full' />
   </div>
-  <h1 class='text-3xl font-bold'>Hola, soy mango</h1>
-  <p>sobre mí...</p>
-  <div>
-    <HeroLink href='https://github.com/Ubiufboeuf'>
-      <Icon class='size-5'>
+  <h1 class='text-3xl sm:text-5xl sm:leading-relaxed font-extrabold text-transparent text-center bg-clip-text bg-linear-to-r from-peach to-mauve'>Hola, soy mango</h1>
+  <p class='max-w-140 text-center sm:text-lg'>+3 años programando. Desarrollador Full-Stack autodidacta, viciado al rendimiento y a las buenas experiencias de uso.</p>
+  <div class='flex items-center flex-wrap gap-2 mt-2'>
+    <HeroLink title='fede.2007.artencio.u@gmail.com' href='mailto:fede.2007.artencio.u@gmail.com' class='font-bold text-crust bg-maroon shr:bg-maroon/80'>
+      <Icon class='size-5 stroke-2'>
+        <IconMail />
+      </Icon>
+      <span class='text-sm'>Correo</span>
+    </HeroLink>
+    <HeroLink title='mAngo (Ubiufboeuf)' href='https://github.com/Ubiufboeuf' class='font-bold text-text bg-crust shr:bg-surface-0/90'>
+      <Icon class='size-5 stroke-2'>
         <IconGitHub />
       </Icon>
       <span class='text-sm'>GitHub</span>
     </HeroLink>
-    <HeroLink>
-      <Icon class='size-5'>
-        <IconGitHub />
+    <HeroLink title='Federico Artencio' href='https://www.linkedin.com/in/federico-artencio-8b6667320/' class='font-bold text-crust bg-sky shr:bg-sky/80'>
+      <Icon class='size-5 stroke-2'>
+        <IconLinkedin />
       </Icon>
       <span class='text-sm'>Linkedin</span>
     </HeroLink>

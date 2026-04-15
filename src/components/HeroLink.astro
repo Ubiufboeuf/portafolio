@@ -1,11 +1,13 @@
 ---
 interface Props {
   href?: string
+  title?: string
+  class?: string
 }
 
-const { href } = Astro.props
+const { href, title, class: className } = Astro.props
 ---
 
-<a href={href} class='w-fit h-fit flex items-center justify-center gap-2 p-2 px-3 rounded-lg transition-colors bg-mantle shr:bg-crust'>
+<a href={href} title={title} class={`${className} w-fit h-fit flex items-center justify-center gap-2 p-2 px-3 rounded-lg transition-colors`}>
   <slot />  
 </a>
