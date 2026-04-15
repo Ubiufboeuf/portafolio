@@ -8,7 +8,7 @@
     url('/Inter.woff2') format('woff2')
 }
 
-@theme {
+@theme {  
   --color-rosewater: #f5e0dc;
   --color-flamingo: #f2cdcd;
   --color-pink: #f5c2e7;
@@ -35,6 +35,14 @@
   --color-base: #1e1e2e;
   --color-mantle: #181825;
   --color-crust: #11111b;
+
+  --color-peach-dark: #fab387;
+  --color-mauve-dark: #cba6f7;
+  --color-peach-light: #fe640b;
+  --color-mauve-light: #8839ef;
+
+  --color-mantle-dark: #181825;
+  --color-mantle-light: #e6e9ef;
 }
 
 &:where([data-theme='light'], [data-theme='light'] *) {
