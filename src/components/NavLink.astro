@@ -1,11 +1,12 @@
 ---
 interface Props {
   href?: string
+  color?: string
 }
 
-const { href } = Astro.props
+const { href, color } = Astro.props
 ---
 
-<a href={href} class='nav-link font-semibold p-1 px-2 rounded-lg transition-colors text-lavender [.active]:bg-surface-0 shr:bg-surface-0'>
+<a href={href} class='nav-link font-semibold p-1 px-2 rounded-lg transition-colors text-lavender [.active]:bg-surface-0 [.active]:text-(--color) shr:bg-surface-0' style={`--color: ${color}`}>
   <slot />
 </a>
