@@ -27,7 +27,7 @@ export const PreactPill = () => (
     <Icon class={iconClasses}>
       <IconPreact />
     </Icon>
-    Preact
+    Preact (TSX)
   </div>
 )
 
