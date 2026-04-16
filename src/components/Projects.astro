@@ -1,6 +1,6 @@
 ---
 import { Icon } from './Icon'
-import { IconGitHub, IconExternal, IconNPM } from './Icons'
+import { IconGitHub, IconExternal, IconNPM, IconTerminal } from './Icons'
 import { AstroPill, BunPill, PreactPill, TailwindPill, TypeScriptPill } from './Pills'
 import ProjectLink from './ProjectLink.astro'
 
@@ -42,7 +42,7 @@ const projects = [
     links: [
       { name: 'GitHub', href: 'https://github.com/Ubiufboeuf/yt-kit', icon: IconGitHub },
       { name: 'NPM', href: 'https://npmjs.org/@yt-kit/core', icon: IconNPM },
-      { name: 'Instalar', action: 'navigator.clipboard.writeText("npm install @yt-kit/core")', icon: IconNPM, type: 'button' },
+      { name: 'Instalar', action: 'navigator.clipboard.writeText("npm install @yt-kit/core")', icon: IconTerminal, type: 'button' },
     ]
   }
 ]
@@ -50,7 +50,6 @@ const projects = [
 
 <section id='projects' class='flex flex-col items-center gap-6 pt-18'>
   <h1 class='text-3xl sm:text-5xl sm:leading-relaxed font-extrabold text-center text-mauve'>Top Proyectos</h1>
-  <p class='text-center text-sm'>(Hay más en <a href='https://github.com/Ubiufboeuf?tab=repositories' class='text-blue underline transition-colors'>github</a>, pero estos son los mejores)</p>
   <div class='flex flex-col items-center gap-12'>
     { projects.map(({ name, href, paragraphs, thumbnail, aspectRatio, technologies, links }) => (
       <article class='flex flex-col w-full gap-2'>
