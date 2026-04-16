@@ -1,12 +1,17 @@
 ---
 interface Props {
   href?: string
+  type?: string
+  action?: string
   class?: string
 }
 
-const { href, class: className } = Astro.props
+const { href, type = 'link', action, class: className } = Astro.props
+
+const isButton = type === 'button'
+const Element = isButton ? 'button' : 'a'
 ---
 
-<a href={href} class={`${className} w-fit h-fit flex items-center justify-center gap-2 p-2 px-3 rounded-lg transition-colors`}>
+<Element href={href} onclick={isButton ? action : undefined} class={`${className} w-fit h-fit flex items-center justify-center gap-2 p-2 px-3 rounded-lg transition-colors`}>
   <slot />  
-</a>
+</Element>

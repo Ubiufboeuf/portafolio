@@ -1,7 +1,6 @@
 ---
 import { Icon } from './Icon'
 import { IconGitHub, IconExternal, IconNPM } from './Icons'
-import { ExpressPill } from './Pills'
 import { AstroPill, BunPill, PreactPill, TailwindPill, TypeScriptPill } from './Pills'
 import ProjectLink from './ProjectLink.astro'
 
@@ -43,7 +42,7 @@ const projects = [
     links: [
       { name: 'GitHub', href: 'https://github.com/Ubiufboeuf/yt-kit', icon: IconGitHub },
       { name: 'NPM', href: 'https://npmjs.org/@yt-kit/core', icon: IconNPM },
-      { name: 'Instalar', href: 'https://npmjs.org/@yt-kit/core', icon: IconNPM },
+      { name: 'Instalar', action: 'navigator.clipboard.writeText("npm install @yt-kit/core")', icon: IconNPM, type: 'button' },
     ]
   }
 ]
@@ -67,8 +66,8 @@ const projects = [
           </div>
           { paragraphs.map((paragraph) => <p class='text-sm text-center transition-colors text-subtext-1'>{paragraph}</p>) }
           <div class='flex justify-center gap-2'>
-            { links.map(({ name, href, icon: LinkIcon }) => (
-              <ProjectLink href={href} class='group font-bold transition-colors **:transition-colors text-text bg-crust shr:bg-[#323344]'>
+            { links.map(({ name, href, icon: LinkIcon, type, action }) => (
+              <ProjectLink href={href} type={type} action={action} class='group font-bold transition-colors **:transition-colors text-text bg-crust shr:bg-[#323344]'>
                 <Icon class='size-5 stroke-crust group-shr:stroke-[#323344]'>
                   <LinkIcon />
                 </Icon>
