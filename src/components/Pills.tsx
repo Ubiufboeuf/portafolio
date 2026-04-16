@@ -1,13 +1,16 @@
 import { Icon } from './Icon'
-import { IconAstro, IconTypeScript, IconPreact, IconBun, IconTailwind, IconExpress } from './Icons'
+import { IconAstro, IconTypeScript, IconPreact, IconBun, IconTailwind, IconExpress, IconAstroLight } from './Icons'
 
 const pillClasses = 'flex items-center justify-center gap-1.5 h-fit w-fit p-2 px-2.5 rounded-md text-xs'
 const iconClasses = 'h-4 w-auto'
 
 export const AstroPill = () => (
   <div class={pillClasses}>
-    <Icon class={iconClasses}>
+    <Icon class={`${iconClasses} hidden is-dark:flex`}>
       <IconAstro />
+    </Icon>
+    <Icon class={`${iconClasses} is-dark:hidden`}>
+      <IconAstroLight />
     </Icon>
     Astro
   </div>
