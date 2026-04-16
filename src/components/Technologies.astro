@@ -1,0 +1,30 @@
+---
+import { Icon } from './Icon';
+import { IconHTML, IconCSS, IconJavaScript, IconTypeScript, IconAstro, IconBun, IconPreact, IconTailwind, IconBash } from './Icons';
+
+const technologies = [
+  { name: 'HTML', icon: IconHTML },
+  { name: 'CSS', icon: IconCSS },
+  { name: 'JavaScript', icon: IconJavaScript },
+  { name: 'TypeScript', icon: IconTypeScript },
+  { name: 'Astro', icon: IconAstro },
+  { name: 'Preact', icon: IconPreact },
+  { name: 'Tailwind CSS', icon: IconTailwind },
+  { name: 'Bun JS', icon: IconBun },
+  { name: 'Bash', icon: IconBash }
+]
+---
+
+<section id='tech' class='flex flex-col items-center gap-6 pt-18'>
+  <h1 class='text-3xl sm:text-5xl sm:leading-relaxed font-extrabold text-center'>Tecnologías</h1>
+  <div class='w-full flex flex-wrap justify-center gap-1.5'>
+    { technologies.map(({ name, icon: TechnologyIcon }) => (
+      <article class='flex items-center justify-center gap-1.5 h-fit w-fit p-2 px-2.5 rounded-md text-xs transition-colors bg-crust'>
+        <Icon class='size-5'>
+          <TechnologyIcon />
+        </Icon>
+        <strong class='text-sm text-center'>{name}</strong>
+      </article>
+    )) }
+  <div>
+</section>
