@@ -6,6 +6,6 @@ interface Props {
 const { href } = Astro.props
 ---
 
-<a href={href} class='transition-colors text-lavender'>
+<a href={href} class='nav-link font-semibold p-1 px-2 rounded-lg transition-colors text-lavender [.active]:bg-surface-0 shr:bg-surface-0'>
   <slot />
 </a>
