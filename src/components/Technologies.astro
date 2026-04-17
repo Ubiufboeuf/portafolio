@@ -17,7 +17,7 @@ const technologies = [
 
 <section id='tech' class='flex flex-col items-center gap-6 pt-18'>
   <h1 class='text-3xl sm:text-5xl sm:leading-relaxed font-extrabold text-center text-green'>Tecnologías</h1>
-  <div class='w-full flex flex-wrap justify-center gap-1.5'>
+  <div class='w-full max-w-140 flex flex-wrap justify-center gap-1.5'>
     { technologies.map(({ name, icon: TechnologyIcon }) => (
       <article class='flex items-center justify-center gap-1.5 h-fit w-fit p-2 px-2.5 rounded-md text-xs transition-colors bg-crust'>
         <Icon class='size-5'>
