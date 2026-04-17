@@ -9,8 +9,8 @@ const projects = [
     name: 'Zenith',
     href: 'https://zenith-6nl.pages.dev',
     paragraphs: [
-      'Sistema POS con gestión de inventario y clientes integrado, pensado para optimizar el flujo de trabajo en entornos de ventas y almacenes.',
-      'Creado para'
+      'Sistema <b>POS</b> con gestión de inventario y clientes integrado, diseñado para optimizar el flujo de trabajo en entornos de ventas y almacenes de alta demanda.',
+      'Construido sobre una arquitectura moderna con <b>Astro</b> y <b>Preact</b>, garantizando una interfaz fluida, tiempos de carga mínimos y una integridad de datos robusta para el usuario final.'
     ],
     thumbnail: '/zenith.webp',
     aspectRatio: 976 / 438.44,
@@ -23,7 +23,10 @@ const projects = [
   {
     name: 'Monado',
     href: 'https://monado.pages.dev',
-    paragraphs: ['Reproductor de video'],
+    paragraphs: [
+      'Reproductor multimedia y alternativa a YouTube de alto rendimiento, enfocado en ofrecer una experiencia, ligera y libre de distracciones',
+      'Actúa como la implementación principal de mi ecosistema yt-kit, demostrando cómo una integración limpia de herramientas multimedia puede transformar la navegación y el consumo de video.'
+    ],
     thumbnail: '/monado.webp',
     aspectRatio: 976 / 549,
     technologies: [AstroPill, PreactPill, TailwindPill],
@@ -35,7 +38,10 @@ const projects = [
   {
     name: 'yt-kit',
     href: 'https://npmjs.org/@yt-kit/core',
-    paragraphs: ['SDK'],
+    paragraphs: [
+      'SDK modular desarrollado en TypeScript para simplificar la gestión de metadatos, el streaming y el procesamiento de video en aplicaciones web modernas.',
+      'Optimizado para entornos de ejecución rápidos como Bun, permite abstraer la complejidad del pipeline multimedia mediante una API intuitiva y estrictamente tipada.'
+    ],
     thumbnail: '/yt-kit.webp',
     aspectRatio: 976 / 373.78,
     technologies: [TypeScriptPill, BunPill],
@@ -63,7 +69,7 @@ const projects = [
           <div class='flex items-center justify-center flex-wrap gap-1'>
             { technologies?.map((Pill) => <Pill />) }
           </div>
-          { paragraphs.map((paragraph) => <p class='text-sm text-center transition-colors text-subtext-1'>{paragraph}</p>) }
+          { paragraphs.map((paragraph) => <p class='text-sm text-center transition-colors text-subtext-1' set:html={paragraph} />) }
           <div class='flex justify-center gap-2'>
             { links.map(({ name, href, icon: LinkIcon, type, action }) => (
               <ProjectLink href={href} type={type} action={action} class='group font-bold transition-colors **:transition-colors text-text bg-crust shr:bg-[#323344]'>
