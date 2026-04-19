@@ -55,21 +55,21 @@ const projects = [
 ---
 
 <section id='projects' class='flex flex-col items-center gap-6 pt-18'>
-  <h1 class='text-3xl sm:text-5xl sm:leading-relaxed font-extrabold text-center text-mauve'>Top Proyectos</h1>
+  <h1 class='text-3xl md:text-5xl md:leading-relaxed font-extrabold text-center text-mauve'>Top Proyectos</h1>
   <div class='flex flex-col items-center gap-12'>
     { projects.map(({ name, href, paragraphs, thumbnail, aspectRatio, technologies, links }) => (
-      <article class='grid sm:grid-cols-2 sm:grid-rows-[40px_auto_auto] w-full gap-2 sm:gap-x-8'>
-        <h1 class='sm:col-2 sm:row-1 sm:text-start text-2xl sm:text-4xl font-extrabold flex-1 text-center'>{name}</h1>
-        <a href={href} target='_blank' class='sm:col-1 sm:row-[1/3] sm:self-center w-full h-fit rounded-xl overflow-hidden p-1 transition-colors bg-linear-to-br from-mauve to-peach'>
+      <article class='grid md:grid-cols-2 md:grid-rows-[40px_auto_auto] w-full gap-2 md:gap-x-8'>
+        <h1 class='md:col-2 md:row-1 md:text-start text-2xl md:text-4xl font-extrabold flex-1 text-center'>{name}</h1>
+        <a href={href} target='_blank' class='md:col-1 md:row-[1/3] md:self-center w-full h-fit rounded-xl overflow-hidden p-1 transition-colors bg-linear-to-br from-mauve to-peach'>
           <div class='w-full h-fit rounded-lg overflow-hidden p-1 transition-colors bg-base'>
             <img src={thumbnail} class='w-full h-auto rounded-sm oveflow-hidden' style={`aspect-ratio: ${aspectRatio}`} />
           </div>
         </a>
-        <div class='sm:col-1 flex items-center justify-center flex-wrap gap-1'>
+        <div class='md:col-1 flex items-center justify-center flex-wrap gap-1'>
           { technologies?.map((Pill) => <Pill />) }
         </div>
-        <div class='sm:row-2 sm:col-2 h-fit flex flex-col gap-3 mt-1'>
-          { paragraphs.map((paragraph) => <p class='not-sm:text-sm text-center sm:text-start transition-colors text-subtext-1' set:html={paragraph} />) }
+        <div class='md:row-2 md:col-2 h-fit flex flex-col gap-3 mt-1'>
+          { paragraphs.map((paragraph) => <p class='not-md:text-sm text-center md:text-start transition-colors text-subtext-1' set:html={paragraph} />) }
         </div>
         <div class='flex justify-center gap-2'>
           { links.map(({ name, href, icon: LinkIcon, type, action }) => (
