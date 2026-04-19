@@ -68,8 +68,8 @@ const projects = [
         <div class='md:col-1 flex items-center justify-center flex-wrap gap-1'>
           { technologies?.map((Pill) => <Pill />) }
         </div>
-        <div class='md:row-2 md:col-2 h-fit flex flex-col gap-3 mt-1'>
-          { paragraphs.map((paragraph) => <p class='not-md:text-sm text-center md:text-start text-subtext-1' set:html={paragraph} />) }
+        <div class='md:row-2 md:col-2 h-fit flex flex-col gap-4 mt-1'>
+          { paragraphs.map((paragraph) => <p class='not-md:text-sm text-center md:text-start leading-relaxed text-subtext-1' set:html={paragraph} />) }
         </div>
         <div class='flex justify-center gap-2'>
           { links.map(({ name, href, icon: LinkIcon, type, action }) => (
