@@ -1,6 +1,6 @@
 ---
 import { Icon } from './Icon'
-import { IconMail, IconGitHub, IconLinkedin } from './Icons'
+import { IconMail, IconGitHub, IconLinkedin, IconPapers } from './Icons'
 import HeroLink from './HeroLink.astro'
 
 const saludo = 'Hola, soy mango'
@@ -16,7 +16,7 @@ const saludo = 'Hola, soy mango'
     <h1 class='opacity-0 is-dark:opacity-100 absolute top-1/2 -translate-y-1/2 text-3xl md:text-5xl md:leading-relaxed font-extrabold transition-opacity text-transparent text-center bg-clip-text bg-linear-to-r from-peach-dark to-mauve-dark'>{saludo}</h1>
   </div>
   <p class='max-w-140 text-center md:text-lg'>+3 años programando. Desarrollador Full-Stack autodidacta, viciado al rendimiento y a las buenas experiencias de usuario.</p>
-  <div class='flex items-center flex-wrap gap-2 mt-2'>
+  <div class='flex items-center justify-center flex-wrap gap-2 mt-2'>
     <HeroLink title='fede.2007.artencio.u@gmail.com' href='mailto:fede.2007.artencio.u@gmail.com' class='font-bold text-crust bg-maroon shr:bg-maroon/80'>
       <Icon class='size-5 stroke-2'>
         <IconMail />
@@ -34,6 +34,12 @@ const saludo = 'Hola, soy mango'
         <IconLinkedin />
       </Icon>
       <span class='text-sm'>Linkedin</span>
+    </HeroLink>
+    <HeroLink title='Descargar CV' download='CV Federico - 2026.pdf' href='/cv.pdf' class='font-bold text-crust bg-peach shr:bg-peach/80'>
+      <Icon class='size-5 stroke-2'>
+        <IconPapers />
+      </Icon>
+      <span class='text-sm'>Descargar CV</span>
     </HeroLink>
   </div>
 </section>
