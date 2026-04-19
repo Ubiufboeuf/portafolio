@@ -1,6 +1,6 @@
 ---
-import { Icon } from './Icon';
-import { IconHTML, IconCSS, IconJavaScript, IconTypeScript, IconAstro, IconBun, IconPreact, IconTailwind, IconBash } from './Icons';
+import { Icon } from './Icon'
+import { IconHTML, IconCSS, IconJavaScript, IconTypeScript, IconAstro, IconBun, IconPreact, IconTailwind, IconBash, IconGit, IconGitHub, IconSQLite } from './Icons'
 
 const technologies = [
   { name: 'HTML', icon: IconHTML },
@@ -11,19 +11,22 @@ const technologies = [
   { name: 'Preact', icon: IconPreact },
   { name: 'Tailwind CSS', icon: IconTailwind },
   { name: 'Bun JS', icon: IconBun },
-  { name: 'Bash', icon: IconBash }
+  { name: 'Bash', icon: IconBash },
+  { name: 'Git', icon: IconGit },
+  { name: 'GitHub', icon: IconGitHub },
+  { name: 'SQLite', icon: IconSQLite }
 ]
 ---
 
 <section id='tech' class='flex flex-col items-center gap-6 pt-18'>
   <h1 class='text-3xl sm:text-5xl sm:leading-relaxed font-extrabold text-center text-green'>Tecnologías</h1>
-  <div class='w-full max-w-140 flex flex-wrap justify-center gap-1.5'>
+  <div class='w-full max-w-140 flex flex-wrap justify-center gap-1.5 sm:gap-2'>
     { technologies.map(({ name, icon: TechnologyIcon }) => (
-      <article class='flex items-center justify-center gap-1.5 h-fit w-fit p-2 px-2.5 rounded-md text-xs transition-colors bg-crust'>
-        <Icon class='size-5'>
+      <article class='flex items-center justify-center gap-1.5 sm:gap-2 h-fit w-fit p-2 px-2.5 sm:px-3 rounded-md text-xs transition-colors bg-crust'>
+        <Icon class='size-5 sm:size-6'>
           <TechnologyIcon />
         </Icon>
-        <strong class='text-sm text-center'>{name}</strong>
+        <strong class='text-sm sm:text-[16px] text-center'>{name}</strong>
       </article>
     )) }
   <div>
