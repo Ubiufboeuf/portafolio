@@ -12,6 +12,6 @@ const isButton = type === 'button'
 const Element = isButton ? 'button' : 'a'
 ---
 
-<Element href={href} onclick={isButton ? action : undefined} class={`${className} w-fit h-fit flex items-center justify-center gap-2 p-2 px-3 rounded-lg transition-colors`}>
+<Element href={href} target='_blank' onclick={isButton ? action : undefined} class={`${className} w-fit h-fit flex items-center justify-center gap-2 p-2 px-3 rounded-lg transition-colors`}>
   <slot />  
 </Element>

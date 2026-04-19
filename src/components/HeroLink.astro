@@ -8,6 +8,6 @@ interface Props {
 const { href, title, class: className } = Astro.props
 ---
 
-<a href={href} title={title} class={`${className} w-fit h-fit flex items-center justify-center gap-2 p-2 px-3 rounded-lg transition-colors`}>
+<a href={href} title={title} target='_blank' class={`${className} w-fit h-fit flex items-center justify-center gap-2 p-2 px-3 rounded-lg transition-colors`}>
   <slot />  
 </a>
