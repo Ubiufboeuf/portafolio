@@ -99,10 +99,6 @@
   }
 }
 
-* {
-  @apply transition-colors;
-}
-
 :root {
   font-family: Inter, system-ui;
   color-scheme: dark light;
