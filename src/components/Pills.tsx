@@ -1,7 +1,7 @@
 import { Icon } from './Icon'
 import { IconAstro, IconTypeScript, IconPreact, IconBun, IconTailwind, IconExpress, IconAstroLight } from './Icons'
 
-const pillClasses = 'flex items-center justify-center gap-1.5 h-fit w-fit p-2 px-2.5 md:p-3 md:px-5 text-xs md:text-sm md:font-medium'
+const pillClasses = 'flex items-center justify-center gap-1.5 h-fit w-fit p-2 px-2.5 md:p-3 md:px-5 text-xs sm:text-sm md:font-medium'
 const iconClasses = 'h-4 w-auto'
 
 export const AstroPill = () => (
