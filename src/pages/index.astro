@@ -9,6 +9,7 @@ import AboutMe from '@/components/AboutMe.astro'
 import Footer from '@/components/Footer.astro'
 
 const fallbackTheme = 'auto'
+const lastUpdate = new Date().toISOString().split('T')[0]
 ---
 
 <!DOCTYPE html>
@@ -30,12 +31,15 @@ const fallbackTheme = 'auto'
 		<meta property="og:image" content="https://portafolio-dej.pages.dev/portafolio.webp">
 		<meta property="og:image:alt" content="Vista previa del portafolio de mAngo (Ubiufboeuf)">
 
-		<meta name="twitter:card" content="https://portafolio-dej.pages.dev/portafolio.webp">
+		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:url" content="https://portafolio-dej.pages.dev/">
 		<meta name="twitter:title" content="mAngo (Ubiufboeuf) | Portafolio">
 		<meta name="twitter:description" content="Explora mi trabajo y proyectos de desarrollo full-stack.">
 		<meta name="twitter:image" content="https://portafolio-dej.pages.dev/portafolio.webp">
 	
+		<meta property="article:published_time" content="2026-04-14">
+		<meta property="article:modified_time" content={lastUpdate}>
+		
 		<meta name="theme-color" content="#232332">
 
 		<link rel='preload' href='/Inter.woff2' as='font' type='font/woff2' crossorigin />
