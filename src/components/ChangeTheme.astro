@@ -2,7 +2,11 @@
 import { Icon } from './Icon'
 ---
 
-<button id='toggle-theme' class='fixed bottom-4 right-4 h-12 w-12 flex items-center justify-center aspect-square rounded-lg cursor-pointer bg-base'>
+<button
+  id='toggle-theme'
+  class='fixed bottom-4 right-4 h-12 w-12 flex items-center justify-center aspect-square rounded-lg cursor-pointer bg-base'
+  aria-label='Cambiar tema'
+>
   <Icon class='size-6 fill-transparent stroke-2 stroke-text'>
     <svg id='sun-icon' viewBox='0 0 24 24' class='h-full w-full is-dark:hidden' stroke-linecap='round' stroke-linejoin='round'>
       <path d='M8 12a4 4 0 1 0 8 0a4 4 0 1 0 -8 0' />

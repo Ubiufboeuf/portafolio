@@ -13,7 +13,9 @@ const projects = [
       'Zenith pone el foco tanto en la experiencia de uso como en el <b>rendimiento</b> y la <b>confiabilidad</b>, buscando convertirse en una herramienta en la que puedas apoyarte desde el primer día.'
     ],
     thumbnail: '/zenith.webp',
-    aspectRatio: 976 / 438.44,
+    alt: 'Página de búsqueda de productos del proyecto zenith',
+    fetchPriority: 'high',
+    aspectRatio: '1280/575',
     technologies: [AstroPill, PreactPill, TailwindPill],
     links: [
       { name: 'Ver en GitHub', href: 'https://github.com/Ubiufboeuf/zenith', icon: IconGitHub },
@@ -28,7 +30,8 @@ const projects = [
       'Su arquitectura basada en una <b>API modular</b> permite crear adaptadores y cambiar fácilmente la fuente de contenido, ofreciendo una experiencia <b>desacoplada</b> y adaptable a distintas necesidades.'
     ],
     thumbnail: '/monado.webp',
-    aspectRatio: 976 / 549,
+    alt: 'Página mostrando un video del youtuber midudev',
+    aspectRatio: '768/432',
     technologies: [AstroPill, PreactPill, TailwindPill],
     links: [
       { name: 'Ver en GitHub', href: 'https://github.com/Ubiufboeuf/monado', icon: IconGitHub },
@@ -43,7 +46,8 @@ const projects = [
       'Con una <b>arquitectura flexible</b> y <b>bajo acoplamiento</b>, yt-kit permite manejar contenido de forma consistente, priorizando <b>rendimiento</b>, <b>adaptabilidad</b> y <b>control</b> en cada implementación.'
     ],
     thumbnail: '/yt-kit.webp',
-    aspectRatio: 976 / 373.78,
+    alt: 'Ejemplo de código simple para descargar un video con yt-kit',
+    aspectRatio: '1280/564',
     technologies: [TypeScriptPill, BunPill],
     links: [
       { name: 'GitHub', href: 'https://github.com/Ubiufboeuf/yt-kit', icon: IconGitHub },
@@ -57,12 +61,12 @@ const projects = [
 <section id='projects' class='flex flex-col items-center gap-6 pt-18'>
   <h1 class='text-3xl md:text-5xl md:leading-relaxed font-extrabold text-center text-mauve'>Top Proyectos</h1>
   <div class='flex flex-col items-center gap-12'>
-    { projects.map(({ name, href, paragraphs, thumbnail, aspectRatio, technologies, links }) => (
+    { projects.map(({ name, href, paragraphs, thumbnail, alt, fetchPriority, aspectRatio, technologies, links }) => (
       <article class='grid md:grid-cols-2 md:grid-rows-[40px_auto_auto] w-full gap-2 md:gap-x-8'>
         <h1 class='md:col-2 md:row-1 md:text-start text-2xl md:text-4xl font-extrabold flex-1 text-center'>{name}</h1>
         <a href={href} target='_blank' class='md:col-1 md:row-[1/3] md:self-center w-full h-fit rounded-xl overflow-hidden p-1 bg-linear-to-br from-mauve to-peach'>
           <div class='w-full h-fit rounded-lg overflow-hidden p-1 bg-base'>
-            <img src={thumbnail} class='w-full h-auto rounded-sm oveflow-hidden' style={`aspect-ratio: ${aspectRatio}`} />
+            <img src={thumbnail} alt={alt} fetchpriority={fetchPriority as 'high' | undefined} class='w-full h-auto rounded-sm oveflow-hidden' style={`aspect-ratio: ${aspectRatio}`} />
           </div>
         </a>
         <div class='md:col-1 flex items-center justify-center flex-wrap gap-1'>
