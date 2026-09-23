@@ -63,7 +63,7 @@ const projects = [
     { projects.map(({ name, href, paragraphs, thumbnail, alt, fetchPriority, aspectRatio, technologies, links }) => (
       <article class='grid md:grid-cols-2 md:grid-rows-[40px_auto_auto] w-full gap-2 md:gap-x-8'>
         <h1 class='md:col-2 md:row-1 md:text-start text-2xl md:text-4xl font-extrabold flex-1 text-center'>{name}</h1>
-        <a href={href} target='_blank' class='md:col-1 md:row-[1/3] md:self-center w-full h-fit rounded-xl overflow-hidden p-1 bg-linear-to-br from-mauve to-peach'>
+        <a rel="noopener noreferrer" href={href} target='_blank' class='md:col-1 md:row-[1/3] md:self-center w-full h-fit rounded-xl overflow-hidden p-1 bg-linear-to-br from-mauve to-peach'>
           <div class='w-full h-fit rounded-lg overflow-hidden p-1 bg-base'>
             <img src={thumbnail} alt={alt} fetchpriority={fetchPriority as 'high' | undefined} class='w-full h-auto rounded-sm oveflow-hidden' style={`aspect-ratio: ${aspectRatio}`} />
           </div>
