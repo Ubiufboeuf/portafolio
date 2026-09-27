@@ -75,8 +75,8 @@ const projects = [
           { paragraphs.map((paragraph) => <p class='not-sm:text-sm leading-relaxed text-subtext-1' set:html={paragraph} />) }
         </div>
         <div class='flex justify-center gap-2'>
-          { links.map(({ name, href, icon: LinkIcon, type, action }) => (
-            <ProjectLink href={href} type={type} action={action} class='group font-bold text-text bg-crust shr:bg-[#323344]'>
+          { links.map(({ name, href, icon: LinkIcon }) => (
+            <ProjectLink href={href} class='group font-bold text-text bg-crust shr:bg-[#323344]'>
               <Icon class='size-5 stroke-crust group-shr:stroke-[#323344]'>
                 <LinkIcon />
               </Icon>
